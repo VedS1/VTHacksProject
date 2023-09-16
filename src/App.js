@@ -3,6 +3,7 @@ import Home from "./pages/Home"
 import NGORegister from "./pages/NGORegister"
 import { Route, Routes } from "react-router-dom"
 import Login from "./pages/Login";
+import NGOInfo from "./pages/NGOInfo";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/ngoregister" element={<NGORegister />} />
+                    <Route path="/ngoinfo" element={<NGOInfo />} />
                 </Routes>
             </div>
         </>
