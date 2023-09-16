@@ -9,6 +9,7 @@ export default function Navbar() {
             <ul>
                 <CustomLink to="/login">Login</CustomLink>
                 <CustomLink to="/ngoregister">Register as NGO</CustomLink>
+                <CustomLink to="/devregister">Register as Developer</CustomLink>
             </ul>
         </nav>
     )

@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Import Axios for making HTTP requests
-import './NGOInfo.css'; // Import a CSS file for styling
+import './DevInfo.css'; // Import a CSS file for styling
 
-function NGOInfo() {
+function DevInfo() {
     // Define state to store input values
     const [inputs, setInputs] = useState({
         name: '',
         password: '',
         email: '',
-        location: '',
-        purpose: '',
-        lookingFor: '',
+        skillset: '',
     });
 
     // Define a function to update the corresponding input value
@@ -23,16 +21,14 @@ function NGOInfo() {
     const handleFinalSubmit = () => {
         // Create a JSON object containing the form data
         const formData = {
-            name: inputs.name,
+            username: inputs.name,
             password: inputs.password,
             email: inputs.email,
-            location: inputs.location,
-            purpose: inputs.purpose,
-            lookingFor: inputs.lookingFor,
+            skillset: inputs.skillset,
         };
 
         // Make a POST request to send the data
-        axios.post("http://localhost:3001/NGORegister", formData)
+        axios.post("http://localhost:3001/DevRegister", formData)
             .then((response) => {
                 alert('Data sent successfully');
                 // Optionally, you can handle the response from the server here
@@ -45,7 +41,7 @@ function NGOInfo() {
 
     return (
         <div>
-            <h1>NGOInfo</h1>
+            <h1>DevInfo</h1>
             <div className="input-container">
                 <label>Enter your name</label><br />
                 <input
@@ -77,31 +73,11 @@ function NGOInfo() {
             </div>
 
             <div className="input-container">
-                <label>Enter your location</label><br />
+                <label>Enter your skillset</label><br />
                 <input
                     type="text"
-                    name="location"
-                    value={inputs.location}
-                    onChange={handleInputChange}
-                />
-            </div>
-
-            <div className="input-container">
-                <label>Enter your purpose</label><br />
-                <input
-                    type="text"
-                    name="purpose"
-                    value={inputs.purpose}
-                    onChange={handleInputChange}
-                />
-            </div>
-
-            <div className="input-container">
-                <label>Enter what you are looking for</label><br />
-                <input
-                    type="text"
-                    name="lookingFor"
-                    value={inputs.lookingFor}
+                    name="skillset"
+                    value={inputs.skillset}
                     onChange={handleInputChange}
                 />
             </div>
@@ -113,4 +89,4 @@ function NGOInfo() {
     );
 }
 
-export default NGOInfo;
+export default DevInfo;

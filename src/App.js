@@ -4,6 +4,8 @@ import NGORegister from "./pages/NGORegister"
 import { Route, Routes } from "react-router-dom"
 import Login from "./pages/Login";
 import NGOInfo from "./pages/NGOInfo";
+import DevRegister from "./pages/DevRegister";
+import DevInfo from "./pages/DevInfo";
 
 function App() {
     return (
@@ -15,6 +17,8 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/ngoregister" element={<NGORegister />} />
                     <Route path="/ngoinfo" element={<NGOInfo />} />
+                    <Route path="/devregister" element={<DevRegister />} />
+                    <Route path="/devinfo" element={<DevInfo />} />
                 </Routes>
             </div>
         </>

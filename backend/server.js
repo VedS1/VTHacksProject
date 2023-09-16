@@ -28,7 +28,7 @@ app.listen(3001, ()=> {
 
 
 
-app.post('/registerUSER', async (req, res) => {
+app.post('/DevRegister', async (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
     const email = req.body.email;
@@ -57,12 +57,12 @@ app.post('/NGORegister', async (req, res) => {
     const lookingFor= req.body.lookingFor;
 
     const org = new OrgModel({
-        name: String,
-        password: String,
-        email : String,
-        location : String,
-        purpose: String,
-        lookingFor: String
+        name: name,
+        password: password,
+        email : email,
+        location : location,
+        purpose: purpose,
+        lookingFor: lookingFor
     });
 
     try {
